@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "../../../axios";
 
 import Post from '../../../components/Post/Post';
-import './Posts.module.css';
+import './Posts.css';
 
 class Posts extends Component{
     state = {
@@ -33,7 +33,7 @@ class Posts extends Component{
     }
 
     render() {
-        let posts = <p style={{textAlign: 'center'}}>Something went wrong!</p>
+         let posts = <p style={{textAlign: 'center'}}>Something went wrong!</p>;
         if (!this.state.error) {
             posts= this.state.posts.map(post => {
             return <Post
@@ -43,11 +43,11 @@ class Posts extends Component{
                 clicked={() => this.postSelectedHandler(post.id)}/>
         });
         }
-        return(
+        return (
             <section className="Posts">
-                    {posts}
+                {posts}
             </section>
-        )
+        );
     }
 }
 
