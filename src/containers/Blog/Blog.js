@@ -5,11 +5,13 @@ import Posts from "./Posts/Posts";
 //import NewPost from "./NewPost/NewPost";
 import asyncComponent from "../../hoc/asyncComponent";
 
+import './Blog.css';
+
 const AsyncNewPost = asyncComponent(() => {
     return import('./NewPost/NewPost');
 });
 
-import './Blog.css';
+
 
 class Blog extends Component {
     state = {
